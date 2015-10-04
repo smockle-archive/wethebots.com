@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Clay Miller -- Designer, Developer, Copywriter -- @smockled
+
+# THANKS
+
+    for changing the world
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, AMAZON S3
