@@ -1,3 +1,5 @@
+/* http://autoprefixer.github.io */
+
 /*:root {
   --color-blue-0: #D0E9FF ;
   --color-blue-1: #90CBFF;
@@ -7,22 +9,10 @@
   --color-white-1: #eee;
   --color-gray-1: #ccc;
   --color-gray-2: #444;
-  --color-blue-0: #e4f6f2;
-  --color-blue-1: #abe7d8;
-  --color-blue-2: #84dcc6;
-  --color-blue-3: #5db6aa;
-  --color-purple-0: #f2e4f6;
-  --color-purple-1: #d8abe7;
-  --color-purple-2: #c684dc;
-  --color-purple-3: #aa5db6;
   --color-yellow-0: #fcf0c5;
   --color-yellow-1: #f8e09b;
-  --color-yellow-2: #f4d26c;
-  --color-yellow-3: #cda52d;
   --color-red-1: #ffa69e;
   --color-red-2: #ff686b;
-  --color-violet-1: #a69eff;
-  --color-violet-2: #686bff;
   --font-sans: 'Effra';
   --font-serif: 'Freight Text Pro';
   --font-monospace: 'Source Code Pro';
@@ -112,20 +102,34 @@ sup {
   line-height: 0;
 }
 dl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 dt {
   font-weight: 700;
-  flex: 0 1 calc(30% - 10px);
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 calc(30% - 10px);
+      -ms-flex: 0 1 calc(30% - 10px);
+          flex: 0 1 calc(30% - 10px);
   overflow: hidden;
   text-align: right;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 dd {
-  flex: 0 1 calc(70% - 10px);
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 calc(70% - 10px);
+      -ms-flex: 0 1 calc(70% - 10px);
+          flex: 0 1 calc(70% - 10px);
   margin-left: 0;
 }
 mark {
@@ -161,6 +165,11 @@ pre {
   border-radius: 0;
   box-sizing: border-box;
   padding: 1rem;
+}
+pre::-moz-selection,
+pre code::-moz-selection {
+  /* Compensate for dark backgrounds */
+  background-color: #90CBFF;
 }
 pre::selection,
 pre code::selection {
@@ -208,6 +217,11 @@ input:focus,
 textarea:focus {
   background-color: #D0E9FF;
   border-bottom-color: #70B6FF;
+}
+input:focus::-moz-selection,
+textarea:focus::-moz-selection {
+  /* Compensate for dark backgrounds */
+  background-color: #90CBFF;
 }
 input:focus::selection,
 textarea:focus::selection {
@@ -301,7 +315,9 @@ input[type=submit]:hover:active {
  body {
    color: #444;
    font-family: serif;
-   font-kerning: normal;
+   -webkit-font-kerning: normal;
+      -moz-font-kerning: normal;
+           font-kerning: normal;
    font-variant-numeric: oldstyle-nums diagonal-fractions;
    font-weight: 400;
    margin: 0;
@@ -310,6 +326,9 @@ input[type=submit]:hover:active {
  }
  body.serif-loaded {
    font-family: 'Freight Text Pro';
+ }
+ ::-moz-selection {
+   background-color: #D0E9FF;
  }
  ::selection {
    background-color: #D0E9FF;
@@ -326,7 +345,9 @@ input[type=submit]:hover:active {
 .app .logo {
   color: #ccc;
   font-family: sans-serif;
-  font-kerning: normal;
+  -webkit-font-kerning: normal;
+     -moz-font-kerning: normal;
+          font-kerning: normal;
   font-size: 2.75rem;
   font-weight: 700;
   line-height: 120%;
@@ -379,13 +400,23 @@ input[type=submit]:hover:active {
  */
 
 .connectIcons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 30em) {
   .connectIcons {
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
 .connectIcon {
