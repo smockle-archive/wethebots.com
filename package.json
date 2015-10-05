@@ -1,0 +1,26 @@
+{
+  "name": "wethebots.com",
+  "version": "1.0.0",
+  "description": "Main website of We The Bots: http://wethebots.com",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "cd public && aws s3 sync . s3://wethebots.com --acl public-read",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wethebots/wethebots.com.git"
+  },
+  "keywords": [
+    "politics",
+    "government"
+  ],
+  "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wethebots/wethebots.com/issues"
+  },
+  "homepage": "https://github.com/wethebots/wethebots.com#readme"
+}
